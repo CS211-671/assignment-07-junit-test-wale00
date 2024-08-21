@@ -11,7 +11,7 @@ class UserTest {
     @DisplayName("Password should not store in plain text")
     public void testPasswordIsNotStoreInPlainText() {
         User user = new User("user01", "plain-p@ssw0rd");
-        String actual = user.getPassword();
+        String actual = user.getHashedPassword();
         String unexpected = "plain-p@ssw0rd";
         assertNotEquals(unexpected, actual);
     }

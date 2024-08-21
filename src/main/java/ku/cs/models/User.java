@@ -6,6 +6,8 @@ public class User {
     private String username;
     private String password;
 
+    private  User(){}
+
     public User(String username) {
         this.username = username;
         password = null;
@@ -35,7 +37,15 @@ public class User {
         return username;
     }
 
-    public String getPassword() {
+    public String getHashedPassword() {
         return password;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                '}';
+    }
 }
+
